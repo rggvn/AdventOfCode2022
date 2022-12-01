@@ -4,7 +4,7 @@ const inputFile = 'input.txt'
 // const inputFile = 'sample.txt'
 
 const input = fs.readFileSync(inputFile, 'utf-8').split(/\n{2,}/);
-const caloriesByElves = input.map(elf => elf.split('\n').filter(val => val).map(val => parseInt(val)).reduce((prev, cur) => prev + cur, 0))
+const caloriesByElves = input.map(elf => elf.split('\n').filter(Boolean).map(Number).reduce((prev, cur) => prev + cur, 0))
 
 const elfWithMaxCalorie = Math.max(...caloriesByElves)
 
