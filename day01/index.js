@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { cursorTo } = require('readline');
 const inputFile = 'input.txt'
 // const inputFile = 'sample.txt'
 
